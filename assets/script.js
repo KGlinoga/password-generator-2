@@ -1,15 +1,19 @@
 // Assignment Code
-var length //=user input from prompt;
+var length; //=user input from prompt;
 var availableUpperCaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var availableLowerCasechars = ["a", "b", "c", "d", "e", "f", "g", "h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var availableSpecialChars = ["!", "@", "#", "$","%","^","&","*","(",")"]
-var availablenumbers = ["1","2","3","4","5","6","7","8","9","0"]
+var availableSpecialChars = ["!", "@", "#", "$","%","^","&","*","(",")"];
+var availablenumbers = ["1","2","3","4","5","6","7","8","9","0"];
+var availPWChars = "";
 
+
+// character pool, how to merge arrays, AKA concatentating.  
 function generatePassword () {
   var password = ""
   // prompt for length, special chars, nmbers, uppercase, lowercase.
   // prompt user for parameters - OK yes, there are prompts for parameters, but we're not saving them anywhere?  maybe variables? 
 getParameters();
+useParameters();
 
 
 // 2nd half: create random password from available characters
@@ -54,5 +58,9 @@ function getParameters() {
   }
   // add characters to availableChars via **confirm (not prompt)
 }  
-
 //OMG just found the MDN article on confirm windows, so let's start back there tomorrow!  RE: what happens when user chooses OK or Cancel - I think we can make that assign variables, or the boolean true can add the variable to the available chars??
+// 
+// conditions based on their prompts 
+function useParameters() {
+  
+}
