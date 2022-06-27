@@ -53,4 +53,6 @@ function getParameters() {
       prompt("Please choose a number between 8 and 129")
   }
   // add characters to availableChars via **confirm (not prompt)
-}
+}  
+
+//OMG just found the MDN article on confirm windows, so let's start back there tomorrow!  RE: what happens when user chooses OK or Cancel - I think we can make that assign variables, or the boolean true can add the variable to the available chars??
