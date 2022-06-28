@@ -3,7 +3,7 @@ var length; //=user input from prompt;
 var availableUpperCaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var availableLowerCasechars = ["a", "b", "c", "d", "e", "f", "g", "h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var availableSpecialChars = ["!", "@", "#", "$","%","^","&","*","(",")"];
-var availablenumbers = ["1","2","3","4","5","6","7","8","9","0"];
+var availableNumbers = ["1","2","3","4","5","6","7","8","9","0"];
 var availPWChars = "";
 
 
@@ -33,7 +33,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
@@ -45,22 +44,28 @@ function getParameters() {
   // set length via prompt
   var length = prompt("Select password length with a number between 8 and 128.") 
     if (length >=8 && length <=129){
+      //confirm: add SpecialChars to availPWChars, else NO SpecialChars
       confirm("Tap OK if your password requires Special Characters. Tap Cancel if not.");
-     {
+      if (window.confirm()) 
+        window.open()
+      };
+      {
+       //confirm: add Numbers to availPWChars, else no Numbers
       confirm("Tap OK if your password requires numbers. Tap Cancel if not.");
-    } {
+    
+     };
+     {
+       //confirm: add Upper Case letters to availPWChars, else no Upper Case letters
       confirm("Tap OK if your password requires Upper Case letters. Tap Cancel if not." );
-    } {
+          };
+           {
+             // confirm: add Lower Case letters to to availPWChars, else no action.
       confirm("Tap OK if your password requires Lower Case letters. Tap Cancel if not.");
     }
-  } else if (length.type != Number){
-      prompt("Please choose a number between 8 and 129")
   }
   // add characters to availableChars via **confirm (not prompt)
-}  
-//OMG just found the MDN article on confirm windows, so let's start back there tomorrow!  RE: what happens when user chooses OK or Cancel - I think we can make that assign variables, or the boolean true can add the variable to the available chars??
-// 
+
 // conditions based on their prompts 
 function useParameters() {
-  
+
 }
